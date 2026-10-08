@@ -2,7 +2,7 @@ import DateReserve from '@/components/DateReserve';
 
 export default function BookingPage() {
   return (
-    <main className="min-h-screen pt-[60px] p-5 flex flex-col items-center">
+    <main className="min-h-screen pt-[60px] p-5 flex flex-col items-center bg-neutral-100 text-black">
       <h1 className="text-3xl font-bold text-gray-800 my-4">Venue Booking</h1>
       <DateReserve />
       <button

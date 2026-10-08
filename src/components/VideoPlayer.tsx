@@ -7,7 +7,8 @@ export default function VideoPlayer({ vdoSrc, isPlaying }: { vdoSrc: string; isP
 
   useEffect(() => {
     if (isPlaying) {
-      vdoRef.current?.play();
+      // play() returns a Promise that rejects if the video is removed before it starts
+      vdoRef.current?.play()?.catch(() => {});
     } else {
       vdoRef.current?.pause();
     }
